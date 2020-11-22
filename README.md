@@ -1,7 +1,7 @@
 # docker-pahser3-typescript-webpack
 
 
-##### Forking the project https://github.com/jakubzet/phaser3-typescript-boilerplate.git with the addition of docker
+##### Fork of the project https://github.com/jakubzet/phaser3-typescript-boilerplate.git with the integration of docker
 
 #### How to run install :
 
