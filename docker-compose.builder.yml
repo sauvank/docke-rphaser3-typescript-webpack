@@ -18,3 +18,7 @@ services:
     extends:
       service: app
     command: npm run build:dev
+  start:
+    extends:
+      service: app
+    command: npm run start

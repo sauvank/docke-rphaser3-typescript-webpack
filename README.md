@@ -9,6 +9,9 @@
 * docker-compose up
 * open url http://localhost:8080
 
+#### Run local server
+* docker-compose -f docker-compose.builder.yml run start
+
 #### Build for prod
 * docker-compose -f docker-compose.builder.yml run build-prod
 
@@ -16,3 +19,7 @@
 * docker-compose -f docker-compose.builder.yml run build-dev
 
 Files build is in directory : app/build/{env}
+
+#### Edit ES lint conf
+
+* Edit file : app/.eslintrc.json ( doc : https://eslint.org/docs/user-guide/configuring )

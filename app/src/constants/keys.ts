@@ -1,35 +1,35 @@
 const keys = {
   scenes: {
-    BootScene: "BootScene",
-    SplashScene: "SplashScene",
-    GameScene: "GameScene",
+    BootScene: 'BootScene',
+    SplashScene: 'SplashScene',
+    GameScene: 'GameScene'
   },
   sprites: {
-    mushroom: "mushroom",
+    mushroom: 'mushroom'
   },
   anims: {
-    playerIdle: "playerIdle",
-    playerRun: "playerRun",
+    playerIdle: 'playerIdle',
+    playerRun: 'playerRun'
   },
   images: {
-    loaderBar: "LoaderBar",
-    loaderBg: "LoaderBg",
+    loaderBar: 'LoaderBar',
+    loaderBg: 'LoaderBg'
   },
   tilemaps: {
-    sampleMap: "sample-map",
+    sampleMap: 'sample-map'
   },
   layers: {
     sampleMap: {
-      background: "Background",
-      ground: "Ground",
-    },
+      background: 'Background',
+      ground: 'Ground'
+    }
   },
   tilesets: {
-    sampleTileset: "sample-tileset",
+    sampleTileset: 'sample-tileset'
   },
   physics: {
-    arcade: "arcade",
-  },
-};
+    arcade: 'arcade'
+  }
+}
 
-export default Object.freeze(keys);
+export default Object.freeze(keys)

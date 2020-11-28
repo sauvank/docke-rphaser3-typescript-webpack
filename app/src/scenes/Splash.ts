@@ -1,23 +1,23 @@
-import keys from "../constants/keys";
+import keys from '../constants/keys'
 
 export class SplashScene extends Phaser.Scene {
-  constructor() {
-    super({ key: keys.scenes.SplashScene });
+  constructor () {
+    super({ key: keys.scenes.SplashScene })
   }
 
-  init() {}
+  init () {}
 
-  preload() {
+  preload () {
     // Load your assets here
-    this.load.path = "../assets/";
-    this.load.image(keys.sprites.mushroom, "images/mushroom2.png");
+    this.load.path = '../assets/'
+    this.load.image(keys.sprites.mushroom, 'images/mushroom2.png')
   }
 
-  create() {
+  create () {
     this.scene.start(keys.scenes.GameScene, {
-      passedData: true,
-    });
+      passedData: true
+    })
   }
 
-  update() {}
+  update () {}
 }

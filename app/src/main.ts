@@ -1,51 +1,51 @@
-import "phaser";
-import { config } from "./config";
-import { GameWindow, CordovaApp } from "./interfaces";
-import { BootScene } from "./scenes/Boot";
-import { SplashScene } from "./scenes/Splash";
-import { GameScene } from "./scenes/Game";
+import 'phaser'
+import { config } from './config'
+import { GameWindow, CordovaApp } from './interfaces'
+import { BootScene } from './scenes/Boot'
+import { SplashScene } from './scenes/Splash'
+import { GameScene } from './scenes/Game'
 
-declare const window: GameWindow;
+declare const window: GameWindow
 
 const gameConfig: GameConfig = {
   ...config,
-  scene: [BootScene, SplashScene, GameScene],
-};
+  scene: [BootScene, SplashScene, GameScene]
+}
 
 class Game extends Phaser.Game {
-  constructor() {
-    super(gameConfig);
+  constructor () {
+    super(gameConfig)
 
     if (!window.cordova) {
-      this.scene.start("Boot");
+      this.scene.start('Boot')
     }
   }
 }
 
-window.game = new Game();
+window.game = new Game()
 
 if (window.cordova) {
   const app: CordovaApp = {
-    initialize: function() {
+    initialize: function () {
       document.addEventListener(
-        "deviceready",
+        'deviceready',
         this.onDeviceReady.bind(this),
-        false,
-      );
+        false
+      )
     },
 
     // deviceready Event Handler
-    onDeviceReady: function() {
-      this.receivedEvent("deviceready");
+    onDeviceReady: function () {
+      this.receivedEvent('deviceready')
 
       // When the device is ready, start Phaser Boot scene
-      window.game.scene.start("Boot");
+      window.game.scene.start('Boot')
     },
 
-    receivedEvent: function(id: string) {
-      console.log("Received Event: " + id);
-    },
-  };
+    receivedEvent: function (id: string) {
+      console.log('Received Event: ' + id)
+    }
+  }
 
-  app.initialize();
+  app.initialize()
 }
