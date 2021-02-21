@@ -1,7 +1,7 @@
 export const config: GameConfig = {
   type: Phaser.AUTO,
   parent: 'canvas',
-  width: 640,
-  height: 320,
+  width: window.innerWidth,
+  height: window.innerHeight,
   backgroundColor: '#000000'
 }
