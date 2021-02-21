@@ -38,8 +38,6 @@ export class BootScene extends Phaser.Scene {
   resizeGame () {
     window.addEventListener('resize', () => {
       this.scale.resize(window.innerWidth, window.innerHeight);
-      // this.physics.world.setBounds(0, 0, width, height, true, true, true, true);
-      // this.cameras.main.setBounds(0, 0, width, height);
     });
   }
 

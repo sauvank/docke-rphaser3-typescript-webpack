@@ -14,12 +14,6 @@ export class ContainerSrv extends Phaser.GameObjects.Container {
     this.helper = new Helpers(scene);
     this.resize();
     this.setPositionPercent(conf.x, conf.y);
-    // @ts-ignore
-    // children?.forEach((child:Phaser.GameObjects) => {
-    //   if (child.posAndSize) {
-    //     child.posAndSize();
-    //   }
-    // });
     this.debug();
   }
 
@@ -32,6 +26,7 @@ export class ContainerSrv extends Phaser.GameObjects.Container {
   }
 
   public debug (color: number = 0xffff00): void {
+    return
     this.graphic.clear();
     this.graphic.fillStyle(color, 0.3);
     this.graphic.fillRect(this.x, this.y, this.getBounds().width, this.getBounds().height);
@@ -53,6 +48,7 @@ export class ContainerSrv extends Phaser.GameObjects.Container {
 
     const origin = this.conf.origin ?? { x: 0.5, y: 0.5 };
     this.setPosition(x - (this.getWidth() / (100 / origin.x / 100)), y - (this.getHeight() / (100 / origin.y / 100)));
+    this.setSize(this.getWidth(), this.getHeight());
     return this;
   }
 
