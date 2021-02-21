@@ -3,5 +3,5 @@ export const config: GameConfig = {
   parent: 'canvas',
   width: window.innerWidth,
   height: window.innerHeight,
-  backgroundColor: '#000000'
+  backgroundColor: '#ffffff'
 }

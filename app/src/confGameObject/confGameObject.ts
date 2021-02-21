@@ -3,30 +3,37 @@ import { ConfigGO } from '../interfaces';
 export const configGO: ConfigGO = {
   game: {
     dummy: {
-      x: 50,
-      y: 100,
-      width: 50,
-      height: 10,
+      x: 0,
+      y: 0,
+      width: 100,
+      height: 50,
+      keepRatio: false,
       texture: 'dummyBottomCenter',
-      origin: { x: 0.5, y: 1 },
-      devices: {
-        tablet: {
-          portrait: {
-            width: 100,
-            y: 10,
-            x: 30
-          }
-        }
-      }
+      origin: { x: 0.5, y: 0.5},
+      // devices: {
+      //   tablet: {
+      //     portrait: {
+      //       width: 100,
+      //       y: 10,
+      //       x: 30
+      //     }
+      //   }
+      // }
     },
 
     dummy2: {
       x: 0,
-      y: 0,
-      width: 25,
-      height: 50,
+      y: 5,
+      width: 10,
+      height: 20,
+      keepRatio: false,
       texture: 'dummyBottomCenter',
-      origin: { x: 0, y: 0 },
+      origin: { x: 5, y: 1.5 }
+    },
+    container: {
+      x: 50,
+      y: 100,
+      origin: { x: 0, y: 0.5 }
     }
   }
 };
