@@ -23,3 +23,11 @@ Files build is in directory : app/build/{env}
 #### Edit ES lint conf
 
 * Edit file : app/.eslintrc.json ( doc : https://eslint.org/docs/user-guide/configuring )
+
+
+
+### Doc
+
+### Image responsive
+ - new ImgSrv(scene, ConfImg);
+    

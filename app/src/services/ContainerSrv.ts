@@ -9,6 +9,7 @@ export class ContainerSrv extends Phaser.GameObjects.Container {
   constructor (scene: Phaser.Scene, conf:ConfContainer, children?: Phaser.GameObjects.GameObject[]) {
     super(scene, 0, 0, children);
     scene.add.existing(this);
+    this.scene = scene;
     this.conf = conf;
     this.graphic = this.scene.add.graphics();
     this.helper = new Helpers(scene);
@@ -26,18 +27,23 @@ export class ContainerSrv extends Phaser.GameObjects.Container {
   }
 
   public debug (color: number = 0xffff00): void {
-    return
+    return;
     this.graphic.clear();
     this.graphic.fillStyle(color, 0.3);
     this.graphic.fillRect(this.x, this.y, this.getBounds().width, this.getBounds().height);
   }
 
   private resize () {
-    window.addEventListener('resize', () => {
-      const conf = new PosAndSize().getConf(this.conf);
+    this.scene.scale.on('resize', function (gameSize, baseSize, displaySize, previousWidth, previousHeight) {
+      const conf = new PosAndSize(this.scene).getConf(this.conf);
       this.setPositionPercent(conf.x, conf.y);
       this.debug();
-    });
+    }, this);
+    // window.addEventListener('resize', () => {
+    //   const conf = new PosAndSize().getConf(this.conf);
+    //   this.setPositionPercent(conf.x, conf.y);
+    //   this.debug();
+    // });
   }
 
   // todo duplicate

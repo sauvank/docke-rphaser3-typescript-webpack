@@ -2,39 +2,50 @@ import { configGO } from './confGameObject';
 import { ConfImg } from '../interfaces';
 
 export class PosAndSize {
+  private scene: Game.Scene;
+  private canvas: any;
+  constructor (scene:Phaser.Scene) {
+    this.scene = scene;
+    this.canvas = this.scene.game.canvas;
+  }
+
   public getConf (conf:ConfImg): ConfImg {
-    if (this.isDesktop()) {
+    if (this.isDesktop() && this.canvas.width > 992) {
       return conf;
     }
 
-    if (this.isMobile()) {
+    if (this.isMobile() || this.canvas.width < 768) {
       if (this.isLandscape() && conf.devices?.mobile?.landscape) {
         return {
           ...conf,
           ...conf.devices?.mobile?.landscape
         };
       }
-      if (this.isPortrait() && conf.devices?.mobile?.portrait) {
-        return {
-          ...conf,
-          ...conf.devices?.mobile?.landscape
-        };
-      }
+      // if (this.isPortrait() && conf.devices?.mobile?.portrait) {
+      return {
+        ...conf,
+        ...conf.devices?.mobile?.landscape
+        // };
+      };
     }
 
-    if (this.isTablet()) {
+    if (this.isTablet() || this.canvas.width >= 768) {
       if (this.isLandscape() && conf.devices?.tablet?.landscape) {
         return {
           ...conf,
           ...conf.devices?.tablet?.landscape
         };
       }
-      if (this.isPortrait() && conf.devices?.tablet?.portrait) {
-        return {
-          ...conf,
-          ...conf.devices?.tablet?.portrait
-        };
-      }
+      // if (this.isPortrait() && conf.devices?.tablet?.portrait) {
+      //   return {
+      //     ...conf,
+      //     ...conf.devices?.tablet?.portrait
+      //   };
+      // }
+      return {
+        ...conf,
+        ...conf.devices?.tablet?.portrait
+      };
     }
 
     return conf;

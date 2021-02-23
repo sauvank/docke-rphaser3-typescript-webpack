@@ -2,7 +2,8 @@ const keys = {
   scenes: {
     BootScene: 'BootScene',
     SplashScene: 'SplashScene',
-    GameScene: 'GameScene'
+    GameScene: 'GameScene',
+    ExampleImgContainer: 'ImgContainer'
   },
   sprites: {
     mushroom: 'mushroom'

@@ -9,7 +9,7 @@ export class ImgSrv extends Phaser.GameObjects.Image {
 
   constructor (scene: Phaser.Scene, conf: ConfImg) {
     super(scene, 0, 0, conf.texture, conf.frame);
-    this.conf = new PosAndSize().getConf(conf);
+    this.conf = new PosAndSize(this.scene).getConf(conf);
     this.helper = new Helpers(scene);
     this.graphic = scene.add.graphics();
     this.posAndSize();
@@ -40,7 +40,7 @@ export class ImgSrv extends Phaser.GameObjects.Image {
   }
 
   public posAndSize () {
-    const conf = new PosAndSize().getConf(this.conf);
+    const conf = new PosAndSize(this.scene).getConf(this.conf);
     const origin = conf.origin ?? { x: 0.5, y: 0.5 };
     this.setPositionPercent(conf.x, conf.y)
       .setDisplaySizePercent(conf.width, conf.height)
@@ -48,9 +48,9 @@ export class ImgSrv extends Phaser.GameObjects.Image {
   }
 
   private resize () {
-    window.addEventListener('resize', () => {
+    this.scene.scale.on('resize', function (gameSize, baseSize, displaySize, previousWidth, previousHeight) {
       this.posAndSize();
-    });
+    }, this);
   }
 
   private haveParent ():boolean {

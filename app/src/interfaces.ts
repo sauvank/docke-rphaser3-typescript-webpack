@@ -29,6 +29,11 @@ export interface ConfImg{
     tablet ?: DevicesOrientation,
     mobile ?: DevicesOrientation
     }
+    // breakpoints :{
+    //   xs : ConfImg,
+    //   sm : ConfImg,
+    //   md : ConfImg,
+    // }
   }
 
 export interface ConfContainer{
@@ -54,9 +59,12 @@ export interface DevicesOrientation{
 }
 
 export interface ConfigGO{
-  game : {
-    dummy : ConfImg
-    dummy2 : ConfImg,
-    container: ConfContainer
+  example : {
+    imgContainer:{
+      dummy : ConfImg
+      dummy2 : ConfImg,
+      container: ConfContainer
+    }
+
   }
 }

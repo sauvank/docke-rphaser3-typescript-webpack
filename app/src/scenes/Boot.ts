@@ -1,7 +1,5 @@
 import keys from '../constants/keys';
 import { load } from 'webfontloader';
-import { ImgSrv } from '../services/ImgServ';
-import { configGO } from '../confGameObject/confGameObject';
 export class BootScene extends Phaser.Scene {
   fontsReady: boolean;
 
@@ -39,7 +37,5 @@ export class BootScene extends Phaser.Scene {
     window.addEventListener('resize', () => {
       this.scale.resize(window.innerWidth, window.innerHeight);
     });
-  }
-
-
+  };
 }

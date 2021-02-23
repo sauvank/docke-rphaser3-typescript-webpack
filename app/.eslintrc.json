@@ -16,6 +16,8 @@
     ],
     "rules": {
         "no-undef": "off",
-        "semi": ["error", "always"]
+        "semi": ["error", "always"],
+        "no-new-object": "off",
+        "no-use-before-define": "off"
     }
 }
