@@ -3,7 +3,8 @@ const keys = {
     BootScene: 'BootScene',
     SplashScene: 'SplashScene',
     GameScene: 'GameScene',
-    ExampleImgContainer: 'ImgContainer'
+    ExampleImgContainer: 'ImgContainer',
+    ExampleMove: 'Move'
   },
   sprites: {
     mushroom: 'mushroom'

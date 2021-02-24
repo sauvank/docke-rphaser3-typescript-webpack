@@ -17,7 +17,6 @@ export class ContainerSrv extends Phaser.GameObjects.Container {
     this.helper = new Helpers(scene);
     this.resize();
     this.setPositionPercent(conf.x, conf.y);
-    this.debug();
   }
 
   public getWidth (): number {
@@ -28,18 +27,10 @@ export class ContainerSrv extends Phaser.GameObjects.Container {
     return this.getBounds().height;
   }
 
-  public debug (color: number = 0xffff00): void {
-    return;
-    this.graphic.clear();
-    this.graphic.fillStyle(color, 0.3);
-    this.graphic.fillRect(this.x, this.y, this.getBounds().width, this.getBounds().height);
-  }
-
   private resize () {
-    this.scene.scale.on('resize', function (gameSize, baseSize, displaySize, previousWidth, previousHeight) {
+    this.scene.scale.on('resize', () => {
       const conf = this.posAndSize.getConf(this.conf);
       this.setPositionPercent(conf.x, conf.y);
-      this.debug();
     }, this);
   }
 

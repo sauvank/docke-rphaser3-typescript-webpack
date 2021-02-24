@@ -52,6 +52,28 @@ export const configGO: ConfigGO = {
         y: 100,
         origin: { x: 0, y: 0.5 }
       }
+    },
+    move: {
+      grass: {
+        x: 0,
+        y: 0,
+        width: 5,
+        height: 5,
+        keepRatio: true,
+        texture: 'grass01',
+        frame: '[A]Grass1-Grass3_pipo-0.png',
+        origin: { x: 0, y: 0 }
+      },
+      mal: {
+        x: 50,
+        y: 50,
+        width: 10,
+        height: 10,
+        texture: 'mal01',
+        frame: 'Male 01-2-0.png',
+        origin: { x: -0, y: 0 }
+      }
     }
+
   }
 };

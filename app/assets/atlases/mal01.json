@@ -1,0 +1,272 @@
+{
+	"textures": [
+		{
+			"image": "mal01.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 120,
+				"h": 102
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Male 01-2-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 29,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 29,
+						"h": 32
+					}
+				},
+				{
+					"filename": "Male 01-2-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 28,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 35,
+						"w": 28,
+						"h": 32
+					}
+				},
+				{
+					"filename": "Male 01-2-10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 28,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 69,
+						"w": 28,
+						"h": 32
+					}
+				},
+				{
+					"filename": "Male 01-2-11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 28,
+						"h": 32
+					},
+					"frame": {
+						"x": 31,
+						"y": 35,
+						"w": 28,
+						"h": 32
+					}
+				},
+				{
+					"filename": "Male 01-2-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 28,
+						"h": 32
+					},
+					"frame": {
+						"x": 32,
+						"y": 1,
+						"w": 28,
+						"h": 32
+					}
+				},
+				{
+					"filename": "Male 01-2-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 28,
+						"h": 32
+					},
+					"frame": {
+						"x": 31,
+						"y": 69,
+						"w": 28,
+						"h": 32
+					}
+				},
+				{
+					"filename": "Male 01-2-5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 28,
+						"h": 32
+					},
+					"frame": {
+						"x": 62,
+						"y": 1,
+						"w": 28,
+						"h": 32
+					}
+				},
+				{
+					"filename": "Male 01-2-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 27,
+						"h": 32
+					},
+					"frame": {
+						"x": 92,
+						"y": 1,
+						"w": 27,
+						"h": 32
+					}
+				},
+				{
+					"filename": "Male 01-2-6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 28,
+						"h": 32
+					},
+					"frame": {
+						"x": 61,
+						"y": 35,
+						"w": 28,
+						"h": 32
+					}
+				},
+				{
+					"filename": "Male 01-2-8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 28,
+						"h": 32
+					},
+					"frame": {
+						"x": 61,
+						"y": 69,
+						"w": 28,
+						"h": 32
+					}
+				},
+				{
+					"filename": "Male 01-2-9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 28,
+						"h": 32
+					},
+					"frame": {
+						"x": 91,
+						"y": 35,
+						"w": 28,
+						"h": 32
+					}
+				},
+				{
+					"filename": "Male 01-2-7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 27,
+						"h": 32
+					},
+					"frame": {
+						"x": 91,
+						"y": 69,
+						"w": 27,
+						"h": 32
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:35879bc9d18db4254f36a3abe4d8dc69:62068712f014590f4719e9486e6e7148:cc7f338019e4b6c237c7ff81cb4f7ab2$"
+	}
+}

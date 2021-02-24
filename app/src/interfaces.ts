@@ -40,6 +40,7 @@ export interface ConfContainer{
     mobile ?: DevicesOrientation
   }
 }
+// @ts-ignore
 export interface ConfImgOption extends ConfImg{
   x?: number ;
   y?: number;
@@ -58,7 +59,11 @@ export interface ConfigGO{
     imgContainer:{
       dummy : ConfImg
       dummy2 : ConfImg,
-      container: ConfContainer
+      container: ConfContainer,
+    },
+    move:{
+      grass : ConfImg,
+      mal: ConfImg
     }
 
   }

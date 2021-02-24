@@ -5,12 +5,13 @@ import { BootScene } from './scenes/Boot';
 import { SplashScene } from './scenes/Splash';
 import { GameScene } from './scenes/Game';
 import { ImgContainer } from './scenes/example/ImgContainer';
+import { Move } from './scenes/example/Move';
 
 declare const window: GameWindow;
 
 const gameConfig: GameConfig = {
   ...config,
-  scene: [BootScene, SplashScene, GameScene, ImgContainer]
+  scene: [BootScene, SplashScene, GameScene, ImgContainer, Move]
 };
 
 class Game extends Phaser.Game {

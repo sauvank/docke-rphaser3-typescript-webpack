@@ -10,16 +10,23 @@ export class DebugSrv {
       this.resizeFunctions();
     }
 
+    /**
+     * All function call for each resize of the page.
+     * @private
+     */
     private resizeFunctions () {
       this.showGrid();
     }
 
     private resize () {
-      this.scene.scale.on('resize', function (gameSize, baseSize, displaySize, previousWidth, previousHeight) {
+      this.scene.scale.on('resize', () => {
         this.resizeFunctions();
       }, this);
     }
 
+    /**
+     * Show line X every 10% of the page.
+     */
     public showGrid () {
       this.graphicsGrid.clear();
       for (let i = 1; i < 10; i++) {

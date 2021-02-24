@@ -1,8 +1,7 @@
-import { configGO } from './confGameObject';
-import { ConfImg } from '../interfaces';
+import { ConfContainer, ConfImg } from '../interfaces';
 
 export class PosAndSize {
-  private scene: Game.Scene;
+  private scene: Phaser.Scene;
   private canvas: any;
   private breakPoints: { md: number; lg: number };
 
@@ -15,14 +14,7 @@ export class PosAndSize {
     };
   }
 
-  public getConf (conf:ConfImg): ConfImg {
-    console.log('----------------------------------------');
-    console.log('is PC ', this.isDesktop() && this.canvas.width >= this.breakPoints.lg);
-    console.log('is tablet', this.isLandscape(), this.isTablet() || this.canvas.width >= this.breakPoints.md);
-    console.log('is mobile', this.isLandscape(), this.isMobile() || this.canvas.width < this.breakPoints.md);
-    console.log('conf', conf);
-    console.log('----------------------------------------');
-
+  public getConf (conf:ConfImg|ConfContainer): ConfImg|ConfContainer {
     if (this.isDesktop() && this.canvas.width >= this.breakPoints.lg) {
       return conf;
     }
