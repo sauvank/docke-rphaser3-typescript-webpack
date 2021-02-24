@@ -12,9 +12,14 @@ export const configGO: ConfigGO = {
         texture: 'dummyBottomCenter',
         origin: { x: 0.5, y: 0.5 },
         devices: {
-          tablet: {
+          mobile: {
             portrait: {
               width: 50
+            }
+          },
+          tablet: {
+            portrait: {
+              width: 80
             }
           }
         }
@@ -27,7 +32,20 @@ export const configGO: ConfigGO = {
         height: 20,
         keepRatio: false,
         texture: 'dummyBottomCenter',
-        origin: { x: 5, y: 1.5 }
+        origin: { x: 5, y: 1.5 },
+        devices: {
+          tablet: {
+            portrait: {
+              y: 0,
+              origin: { x: 0.5, y: 0.5 }
+            }
+          },
+          mobile: {
+            portrait: {
+              origin: { x: -1.5, y: -0 }
+            }
+          }
+        }
       },
       container: {
         x: 50,

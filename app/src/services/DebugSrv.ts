@@ -31,16 +31,21 @@ export class DebugSrv {
       }
     }
 
-    public resizeGameEvent () {
-      const canvas = this.scene.game.canvas;
+    /**
+     * Resize game every X second.
+     * @param resize, array object contain all dimension for resize the game.
+     * @param delay, delay to call resize function.
+     */
+    public resizeGameEvent (resize: {width: number, height: number, title?: string}[], delay:number = 3000) {
+      const text = this.scene.add.text(0, 0, '', { color: 'red', fontSize: 40 });
+      let ite = 0;
       this.scene.time.addEvent({
-        delay: 1,
+        delay,
         loop: true,
         callback: () => {
-          this.scene.scale.resize(canvas.width -= 1, canvas.height -= 1);
-          if (canvas.width <= 400) {
-            this.scene.scale.resize(window.innerWidth, window.innerHeight);
-          }
+          this.scene.scale.resize(resize[ite].width, resize[ite].height);
+          text.setText(`${resize[ite].width}px, ${resize[ite].height}px - ${resize[ite].title || ''}`);
+          ite - 1 < 0 ? ite = resize.length - 1 : ite -= 1;
         },
         callbackScope: this
       });

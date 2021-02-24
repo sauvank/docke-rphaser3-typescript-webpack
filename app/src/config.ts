@@ -4,4 +4,4 @@ export const config: GameConfig = {
   width: window.innerWidth,
   height: window.innerHeight,
   backgroundColor: '#ffffff'
-}
+};

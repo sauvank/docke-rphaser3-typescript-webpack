@@ -29,11 +29,6 @@ export interface ConfImg{
     tablet ?: DevicesOrientation,
     mobile ?: DevicesOrientation
     }
-    // breakpoints :{
-    //   xs : ConfImg,
-    //   sm : ConfImg,
-    //   md : ConfImg,
-    // }
   }
 
 export interface ConfContainer{

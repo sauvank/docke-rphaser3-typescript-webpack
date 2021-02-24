@@ -4,47 +4,54 @@ import { ConfImg } from '../interfaces';
 export class PosAndSize {
   private scene: Game.Scene;
   private canvas: any;
+  private breakPoints: { md: number; lg: number };
+
   constructor (scene:Phaser.Scene) {
     this.scene = scene;
     this.canvas = this.scene.game.canvas;
+    this.breakPoints = {
+      md: 768,
+      lg: 992
+    };
   }
 
   public getConf (conf:ConfImg): ConfImg {
-    if (this.isDesktop() && this.canvas.width > 992) {
+    console.log('----------------------------------------');
+    console.log('is PC ', this.isDesktop() && this.canvas.width >= this.breakPoints.lg);
+    console.log('is tablet', this.isLandscape(), this.isTablet() || this.canvas.width >= this.breakPoints.md);
+    console.log('is mobile', this.isLandscape(), this.isMobile() || this.canvas.width < this.breakPoints.md);
+    console.log('conf', conf);
+    console.log('----------------------------------------');
+
+    if (this.isDesktop() && this.canvas.width >= this.breakPoints.lg) {
       return conf;
     }
 
-    if (this.isMobile() || this.canvas.width < 768) {
-      if (this.isLandscape() && conf.devices?.mobile?.landscape) {
-        return {
-          ...conf,
-          ...conf.devices?.mobile?.landscape
-        };
-      }
-      // if (this.isPortrait() && conf.devices?.mobile?.portrait) {
-      return {
-        ...conf,
-        ...conf.devices?.mobile?.landscape
-        // };
-      };
-    }
-
-    if (this.isTablet() || this.canvas.width >= 768) {
+    if (this.isTablet() || this.canvas.width >= this.breakPoints.md) {
       if (this.isLandscape() && conf.devices?.tablet?.landscape) {
         return {
           ...conf,
           ...conf.devices?.tablet?.landscape
         };
       }
-      // if (this.isPortrait() && conf.devices?.tablet?.portrait) {
-      //   return {
-      //     ...conf,
-      //     ...conf.devices?.tablet?.portrait
-      //   };
-      // }
+
       return {
         ...conf,
         ...conf.devices?.tablet?.portrait
+      };
+    }
+
+    if (this.isMobile() || this.canvas.width < this.breakPoints.md) {
+      if (this.isLandscape() && conf.devices?.mobile?.landscape) {
+        return {
+          ...conf,
+          ...conf.devices?.mobile?.landscape
+        };
+      }
+
+      return {
+        ...conf,
+        ...conf.devices?.mobile?.portrait
       };
     }
 
