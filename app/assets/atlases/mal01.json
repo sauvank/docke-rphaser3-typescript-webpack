@@ -10,7 +10,7 @@
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "Male 01-2-0.png",
+					"filename": "male01-0.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -31,7 +31,7 @@
 					}
 				},
 				{
-					"filename": "Male 01-2-1.png",
+					"filename": "male01-1.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -52,7 +52,7 @@
 					}
 				},
 				{
-					"filename": "Male 01-2-10.png",
+					"filename": "male01-10.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -73,7 +73,7 @@
 					}
 				},
 				{
-					"filename": "Male 01-2-11.png",
+					"filename": "male01-11.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -94,7 +94,7 @@
 					}
 				},
 				{
-					"filename": "Male 01-2-2.png",
+					"filename": "male01-2.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -115,7 +115,7 @@
 					}
 				},
 				{
-					"filename": "Male 01-2-3.png",
+					"filename": "male01-3.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -136,7 +136,7 @@
 					}
 				},
 				{
-					"filename": "Male 01-2-5.png",
+					"filename": "male01-5.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -157,7 +157,7 @@
 					}
 				},
 				{
-					"filename": "Male 01-2-4.png",
+					"filename": "male01-4.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -178,7 +178,7 @@
 					}
 				},
 				{
-					"filename": "Male 01-2-6.png",
+					"filename": "male01-6.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -199,7 +199,7 @@
 					}
 				},
 				{
-					"filename": "Male 01-2-8.png",
+					"filename": "male01-8.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -220,7 +220,7 @@
 					}
 				},
 				{
-					"filename": "Male 01-2-9.png",
+					"filename": "male01-9.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -241,7 +241,7 @@
 					}
 				},
 				{
-					"filename": "Male 01-2-7.png",
+					"filename": "male01-7.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -267,6 +267,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:35879bc9d18db4254f36a3abe4d8dc69:62068712f014590f4719e9486e6e7148:cc7f338019e4b6c237c7ff81cb4f7ab2$"
+		"smartupdate": "$TexturePacker:SmartUpdate:afb34adbef35781a451a7c1ef83af100:62068712f014590f4719e9486e6e7148:cc7f338019e4b6c237c7ff81cb4f7ab2$"
 	}
 }

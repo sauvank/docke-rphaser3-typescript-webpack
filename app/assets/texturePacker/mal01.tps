@@ -181,18 +181,18 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">imgs/mal01/Male 01-2-0.png</key>
-            <key type="filename">imgs/mal01/Male 01-2-1.png</key>
-            <key type="filename">imgs/mal01/Male 01-2-10.png</key>
-            <key type="filename">imgs/mal01/Male 01-2-11.png</key>
-            <key type="filename">imgs/mal01/Male 01-2-2.png</key>
-            <key type="filename">imgs/mal01/Male 01-2-3.png</key>
-            <key type="filename">imgs/mal01/Male 01-2-4.png</key>
-            <key type="filename">imgs/mal01/Male 01-2-5.png</key>
-            <key type="filename">imgs/mal01/Male 01-2-6.png</key>
-            <key type="filename">imgs/mal01/Male 01-2-7.png</key>
-            <key type="filename">imgs/mal01/Male 01-2-8.png</key>
-            <key type="filename">imgs/mal01/Male 01-2-9.png</key>
+            <key type="filename">imgs/mal01/male01-0.png</key>
+            <key type="filename">imgs/mal01/male01-1.png</key>
+            <key type="filename">imgs/mal01/male01-10.png</key>
+            <key type="filename">imgs/mal01/male01-11.png</key>
+            <key type="filename">imgs/mal01/male01-2.png</key>
+            <key type="filename">imgs/mal01/male01-3.png</key>
+            <key type="filename">imgs/mal01/male01-4.png</key>
+            <key type="filename">imgs/mal01/male01-5.png</key>
+            <key type="filename">imgs/mal01/male01-6.png</key>
+            <key type="filename">imgs/mal01/male01-7.png</key>
+            <key type="filename">imgs/mal01/male01-8.png</key>
+            <key type="filename">imgs/mal01/male01-9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -210,18 +210,18 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>imgs/mal01/Male 01-2-0.png</filename>
-            <filename>imgs/mal01/Male 01-2-1.png</filename>
-            <filename>imgs/mal01/Male 01-2-10.png</filename>
-            <filename>imgs/mal01/Male 01-2-11.png</filename>
-            <filename>imgs/mal01/Male 01-2-2.png</filename>
-            <filename>imgs/mal01/Male 01-2-3.png</filename>
-            <filename>imgs/mal01/Male 01-2-4.png</filename>
-            <filename>imgs/mal01/Male 01-2-5.png</filename>
-            <filename>imgs/mal01/Male 01-2-6.png</filename>
-            <filename>imgs/mal01/Male 01-2-7.png</filename>
-            <filename>imgs/mal01/Male 01-2-8.png</filename>
-            <filename>imgs/mal01/Male 01-2-9.png</filename>
+            <filename>imgs/mal01/male01-0.png</filename>
+            <filename>imgs/mal01/male01-1.png</filename>
+            <filename>imgs/mal01/male01-10.png</filename>
+            <filename>imgs/mal01/male01-11.png</filename>
+            <filename>imgs/mal01/male01-2.png</filename>
+            <filename>imgs/mal01/male01-3.png</filename>
+            <filename>imgs/mal01/male01-4.png</filename>
+            <filename>imgs/mal01/male01-5.png</filename>
+            <filename>imgs/mal01/male01-6.png</filename>
+            <filename>imgs/mal01/male01-7.png</filename>
+            <filename>imgs/mal01/male01-8.png</filename>
+            <filename>imgs/mal01/male01-9.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

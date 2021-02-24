@@ -19,8 +19,8 @@ export class GameScene extends Scene {
   }
 
   create () {
-    this.scene.start(keys.scenes.ExampleImgContainer);
-    // this.scene.start(keys.scenes.ExampleMove);
+    // this.scene.start(keys.scenes.ExampleImgContainer);
+    this.scene.start(keys.scenes.ExampleMove);
   }
 
   update () {

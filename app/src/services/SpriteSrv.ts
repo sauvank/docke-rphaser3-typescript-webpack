@@ -18,7 +18,7 @@ export class SpriteSrv extends Phaser.GameObjects.Sprite {
       this.conf = conf;
       this.helper = new Helpers(scene);
       this.graphic = scene.add.graphics();
-      const helperGoSrv = new HelperGOSrv(scene, this, conf);
+      new HelperGOSrv(scene, this, conf);
       scene.add.existing(this);
     }
 }
