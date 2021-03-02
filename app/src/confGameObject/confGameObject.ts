@@ -66,7 +66,7 @@ export const configGO: ConfigGO = {
       },
       mal: {
         x: 50,
-        y: 50,
+        y: 60,
         width: 10,
         height: 10,
         texture: 'mal01',

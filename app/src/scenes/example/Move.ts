@@ -2,6 +2,7 @@ import keys from '../../constants/keys';
 import { configGO } from '../../confGameObject/confGameObject';
 import { Scene } from '../Scene';
 import { Player } from '../../prefabs/Player';
+import {ContainerSrv} from "../../services/ContainerSrv";
 
 export class Move extends Scene {
   constructor () {
@@ -29,7 +30,6 @@ export class Move extends Scene {
     // Keep ratio after resize
     const nSize = this.helper?.calculateAspectRatioFit(platforms.width, platforms.height, window.innerWidth, window.innerHeight);
     platforms.setScale(nSize.width / platforms.width, nSize.height / platforms.height);
-
     const player = new Player(this, configGO.example.move.mal, platforms);
 
     window.addEventListener('resize', () => {
@@ -42,7 +42,17 @@ export class Move extends Scene {
       platforms.setScale(nSize.width / platforms.width, nSize.height / platforms.height);
 
       player.helperGo.setPositionPercent(xP, yP);
+      player.body.setBoundsRectangle(new Phaser.Geom.Rectangle(platforms.x, platforms.y, platforms.displayWidth, platforms.displayHeight));
+
     });
+
+    player.body.setBoundsRectangle(new Phaser.Geom.Rectangle(platforms.x, platforms.y, platforms.displayWidth, platforms.displayHeight));
+
+    // this.add.graphics()
+    //     .lineStyle(5, 0x00ffff, 0.5)
+    //     // .strokeRectShape(block1.body.customBoundsRectangle)
+    //     .strokeRectShape(player.body.customBoundsRectangle);
+
   }
 
   update () {

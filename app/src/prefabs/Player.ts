@@ -10,6 +10,10 @@ export class Player extends SpriteSrv {
     this.createAnimWalk();
     this.scene.physics.world.enable(this);
     this.controls();
+
+    this.body.setVelocity(100, 200);
+    this.body.setBounce(1, 1);
+    this.body.setCollideWorldBounds(true);
   }
 
   createAnimWalk () {
