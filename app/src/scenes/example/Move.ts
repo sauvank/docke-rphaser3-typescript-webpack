@@ -1,13 +1,20 @@
 import keys from '../../constants/keys';
-import { ImgSrv } from '../../services/ImgSrv';
 import { configGO } from '../../confGameObject/confGameObject';
-import { ContainerSrv } from '../../services/ContainerSrv';
 import { Scene } from '../Scene';
-import { SpriteSrv } from '../../services/SpriteSrv';
+import { Player } from '../../prefabs/Player';
 
 export class Move extends Scene {
   constructor () {
-    super({ key: keys.scenes.ExampleMove });
+    super({
+      key: keys.scenes.ExampleMove,
+      physics: {
+        default: 'arcade',
+        arcade: {
+          gravity: { y: 0 },
+          debug: true
+        }
+      }
+    });
   }
 
   init (data: Object) {
@@ -15,25 +22,27 @@ export class Move extends Scene {
   }
 
   create () {
-    const mal = new SpriteSrv(this, configGO.example.move.mal);
+    const map = this.make.tilemap({ key: 'maps' });
+    const tileset = map.addTilesetImage('grass01', 'tiles');
+    const platforms = map.createStaticLayer('level1', tileset, 0, 0);
 
-    this.anims.create({
-      key: 'walk',
-      frames: this.anims.generateFrameNames('mal01', {
-        prefix: 'male01-',
-        suffix: '.png',
-        start: 0,
-        end: 2,
-        zeroPad: 0,
-      }),
-      frameRate: 8,
-      repeat: -1
+    // Keep ratio after resize
+    const nSize = this.helper?.calculateAspectRatioFit(platforms.width, platforms.height, window.innerWidth, window.innerHeight);
+    platforms.setScale(nSize.width / platforms.width, nSize.height / platforms.height);
+
+    const player = new Player(this, configGO.example.move.mal, platforms);
+
+    window.addEventListener('resize', () => {
+      // get the value in percentage of the position x with respect to the tilemap.
+      const xP = 100 - this.helper?.getPercentOfValue(platforms.displayWidth, player.x);
+      const yP = 100 - this.helper?.getPercentOfValue(platforms.displayHeight, player.y);
+
+      // Keep ratio after resize
+      const nSize = this.helper?.calculateAspectRatioFit(platforms.width, platforms.height, window.innerWidth, window.innerHeight);
+      platforms.setScale(nSize.width / platforms.width, nSize.height / platforms.height);
+
+      player.helperGo.setPositionPercent(xP, yP);
     });
-    mal.play('walk');
-
-    this.add.group([
-      { key: 'grass01', frame: 0, repeat: 10, setXY: { x: 32, y: 148, stepX: 32 } }
-    ]);
   }
 
   update () {

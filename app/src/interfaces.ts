@@ -15,7 +15,10 @@ export interface ControlsScheme {
   right: Phaser.Input.Keyboard.Key;
   down: Phaser.Input.Keyboard.Key;
 }
-
+export interface WH{
+  width: number;
+  height:number;
+}
 export interface ConfImg{
   x: number ;
   y: number;
@@ -25,6 +28,7 @@ export interface ConfImg{
   frame?: string | integer;
   origin?: {x:number, y:number};
   keepRatio?: boolean;
+  newPositionWithResize?: boolean;
   devices ?: {
     tablet ?: DevicesOrientation,
     mobile ?: DevicesOrientation

@@ -1,4 +1,4 @@
-import { ConfImg } from '../interfaces';
+import { ConfImg, WH } from '../interfaces';
 import { Helpers } from '../Helpers';
 import { PosAndSize } from '../confGameObject/PosAndSize';
 
@@ -11,15 +11,26 @@ export class HelperGOSrv {
     private scene: Phaser.Scene;
     private conf: ConfImg;
     private posAndSize: PosAndSize;
+    private previousDim = { width: 0, height: 0 };
+    private referenceGO?: Phaser.GameObjects.Sprite | Phaser.GameObjects.Image| Phaser.Tilemaps.StaticTilemapLayer;
 
-    constructor (scene: Phaser.Scene, gameObject: Phaser.GameObjects.Image, conf: ConfImg) {
+    constructor (scene: Phaser.Scene, gameObject: Phaser.GameObjects.Image, conf: ConfImg, referenceGo?: Phaser.GameObjects.Sprite |Phaser.GameObjects.Image | Phaser.Tilemaps.StaticTilemapLayer) {
       this.helper = new Helpers(scene);
       this.scene = scene;
       this.gameObject = gameObject;
       this.conf = conf;
       this.posAndSize = new PosAndSize(this.scene);
+
+      if (referenceGo !== undefined) {
+        this.setReferenceGo(referenceGo);
+      }
+
       this.positionAndSize();
       this.resize();
+    }
+
+    public setReferenceGo (reference: Phaser.GameObjects.Sprite |Phaser.GameObjects.Image | Phaser.Tilemaps.StaticTilemapLayer) {
+      this.referenceGO = reference;
     }
 
     /**
@@ -31,6 +42,7 @@ export class HelperGOSrv {
       const parentSizes = this.getParentSize();
       const x = this.helper.percentFromReference(parentSizes.width, xPercent);
       const y = this.helper.percentFromReference(parentSizes.height, yPercent);
+
       this.gameObject.setPosition(x, y);
       return this;
     }
@@ -56,10 +68,14 @@ export class HelperGOSrv {
     /**
      * Set position and size ogf the game object from conf.
      */
-    public positionAndSize ():void {
+    public positionAndSize (isFromResize: boolean = false):void {
       const conf = this.posAndSize.getConf(this.conf);
       const origin = conf.origin ?? { x: 0.5, y: 0.5 };
-      this.setPositionPercent(conf.x, conf.y)
+
+      if (this.conf.newPositionWithResize === undefined || this.conf.newPositionWithResize || !isFromResize) {
+        this.setPositionPercent(conf.x, conf.y);
+      }
+      this
         .setDisplaySizePercent('width' in conf ? conf.width : 0, 'height' in conf ? conf.height : 0)
         .setOrigin(origin.x, origin.y);
     }
@@ -68,8 +84,9 @@ export class HelperGOSrv {
      * Function call for each event resize.
      */
     public resize ():void {
-      this.scene.scale.on('resize', () => {
-        this.positionAndSize();
+      this.scene.scale.on('resize', (conf:WH, gameSize: WH, baseSize:WH, displaySize:WH, previousWidth:number, previousHeight:number) => {
+        this.previousDim = { width: previousWidth, height: previousHeight };
+        this.positionAndSize(true);
       }, this);
     }
 
@@ -80,9 +97,16 @@ export class HelperGOSrv {
      */
     private getParentSize (): {width: number, height: number} {
       const canvas = this.scene.game.canvas;
+
+      if (this.referenceGO === undefined) {
+        return {
+          width: canvas.width,
+          height: canvas.height
+        };
+      }
       return {
-        width: canvas.width,
-        height: canvas.height
+        width: this.referenceGO.displayWidth,
+        height: this.referenceGO.displayHeight
       };
     }
 }

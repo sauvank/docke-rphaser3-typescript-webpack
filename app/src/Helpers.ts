@@ -1,3 +1,5 @@
+import { WH } from './interfaces';
+
 export class Helpers {
     private scene:Phaser.Scene;
 
@@ -5,8 +7,16 @@ export class Helpers {
       this.scene = scene;
     }
 
+    public getHelper (): this {
+      return this;
+    }
+
     public random (min:number, max:number, floatBetween = false):number {
       return floatBetween ? Phaser.Math.FloatBetween(min, max) : Phaser.Math.Between(min, max);
+    }
+
+    public getPercentOfValue (value1: number, value2: number) {
+      return ((value1 - value2) / value1) * 100;
     }
 
     /**
@@ -64,7 +74,7 @@ export class Helpers {
      * @param {Number} maxHeight maximum available height
      * @return {Object} { width, height }
      */
-    calculateAspectRatioFit (srcWidth: number, srcHeight: number, maxWidth: number, maxHeight: number) {
+    calculateAspectRatioFit (srcWidth: number, srcHeight: number, maxWidth: number, maxHeight: number):WH {
       const ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
       return { width: srcWidth * ratio, height: srcHeight * ratio };
     }

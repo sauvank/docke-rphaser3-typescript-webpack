@@ -4,260 +4,260 @@
 			"image": "mal01.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 120,
-				"h": 102
+				"w": 384,
+				"h": 32
 			},
 			"scale": 1,
 			"frames": [
 				{
 					"filename": "male01-0.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 32,
 						"h": 32
 					},
 					"spriteSourceSize": {
-						"x": 2,
+						"x": 0,
 						"y": 0,
-						"w": 29,
+						"w": 32,
 						"h": 32
 					},
 					"frame": {
-						"x": 1,
-						"y": 1,
-						"w": 29,
+						"x": 0,
+						"y": 0,
+						"w": 32,
 						"h": 32
 					}
 				},
 				{
 					"filename": "male01-1.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 32,
 						"h": 32
 					},
 					"spriteSourceSize": {
-						"x": 3,
+						"x": 0,
 						"y": 0,
-						"w": 28,
-						"h": 32
-					},
-					"frame": {
-						"x": 1,
-						"y": 35,
-						"w": 28,
-						"h": 32
-					}
-				},
-				{
-					"filename": "male01-10.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
 						"w": 32,
 						"h": 32
 					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 0,
-						"w": 28,
-						"h": 32
-					},
 					"frame": {
-						"x": 1,
-						"y": 69,
-						"w": 28,
-						"h": 32
-					}
-				},
-				{
-					"filename": "male01-11.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
+						"x": 32,
+						"y": 0,
 						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 0,
-						"w": 28,
-						"h": 32
-					},
-					"frame": {
-						"x": 31,
-						"y": 35,
-						"w": 28,
 						"h": 32
 					}
 				},
 				{
 					"filename": "male01-2.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 32,
 						"h": 32
 					},
 					"spriteSourceSize": {
-						"x": 3,
+						"x": 0,
 						"y": 0,
-						"w": 28,
+						"w": 32,
 						"h": 32
 					},
 					"frame": {
-						"x": 32,
-						"y": 1,
-						"w": 28,
+						"x": 64,
+						"y": 0,
+						"w": 32,
 						"h": 32
 					}
 				},
 				{
 					"filename": "male01-3.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 32,
 						"h": 32
 					},
 					"spriteSourceSize": {
-						"x": 3,
+						"x": 0,
 						"y": 0,
-						"w": 28,
-						"h": 32
-					},
-					"frame": {
-						"x": 31,
-						"y": 69,
-						"w": 28,
-						"h": 32
-					}
-				},
-				{
-					"filename": "male01-5.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
 						"w": 32,
 						"h": 32
 					},
-					"spriteSourceSize": {
-						"x": 3,
-						"y": 0,
-						"w": 28,
-						"h": 32
-					},
 					"frame": {
-						"x": 62,
-						"y": 1,
-						"w": 28,
+						"x": 96,
+						"y": 0,
+						"w": 32,
 						"h": 32
 					}
 				},
 				{
 					"filename": "male01-4.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 32,
 						"h": 32
 					},
 					"spriteSourceSize": {
-						"x": 3,
+						"x": 0,
 						"y": 0,
-						"w": 27,
+						"w": 32,
 						"h": 32
 					},
 					"frame": {
-						"x": 92,
-						"y": 1,
-						"w": 27,
+						"x": 128,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "male01-5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 160,
+						"y": 0,
+						"w": 32,
 						"h": 32
 					}
 				},
 				{
 					"filename": "male01-6.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 32,
 						"h": 32
 					},
 					"spriteSourceSize": {
-						"x": 2,
+						"x": 0,
 						"y": 0,
-						"w": 28,
-						"h": 32
-					},
-					"frame": {
-						"x": 61,
-						"y": 35,
-						"w": 28,
-						"h": 32
-					}
-				},
-				{
-					"filename": "male01-8.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
 						"w": 32,
 						"h": 32
 					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 0,
-						"w": 28,
-						"h": 32
-					},
 					"frame": {
-						"x": 61,
-						"y": 69,
-						"w": 28,
-						"h": 32
-					}
-				},
-				{
-					"filename": "male01-9.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
+						"x": 192,
+						"y": 0,
 						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 0,
-						"w": 28,
-						"h": 32
-					},
-					"frame": {
-						"x": 91,
-						"y": 35,
-						"w": 28,
 						"h": 32
 					}
 				},
 				{
 					"filename": "male01-7.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 32,
 						"h": 32
 					},
 					"spriteSourceSize": {
-						"x": 3,
+						"x": 0,
 						"y": 0,
-						"w": 27,
+						"w": 32,
 						"h": 32
 					},
 					"frame": {
-						"x": 91,
-						"y": 69,
-						"w": 27,
+						"x": 224,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "male01-8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 256,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "male01-9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 288,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "male01-10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 320,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "male01-11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 352,
+						"y": 0,
+						"w": 32,
 						"h": 32
 					}
 				}
@@ -267,6 +267,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:afb34adbef35781a451a7c1ef83af100:62068712f014590f4719e9486e6e7148:cc7f338019e4b6c237c7ff81cb4f7ab2$"
+		"smartupdate": "$TexturePacker:SmartUpdate:93a5df1291dc7f7c00faa996a0bd3492:62068712f014590f4719e9486e6e7148:cc7f338019e4b6c237c7ff81cb4f7ab2$"
 	}
 }

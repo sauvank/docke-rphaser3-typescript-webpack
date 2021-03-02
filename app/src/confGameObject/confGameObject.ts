@@ -70,7 +70,8 @@ export const configGO: ConfigGO = {
         width: 10,
         height: 10,
         texture: 'mal01',
-        frame: 'male01-0.png',
+        frame: 'male01-1.png',
+        newPositionWithResize: false,
         origin: { x: -0, y: 0 }
       }
     }

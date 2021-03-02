@@ -8,17 +8,18 @@ import { HelperGOSrv } from './HelperGOSrv';
  */
 export class SpriteSrv extends Phaser.GameObjects.Sprite {
     private conf: ConfImg;
-    private helper: Helpers;
+    public helper: Helpers;
+    public helperGo: HelperGOSrv;
     private graphic: Phaser.GameObjects.Graphics;
     private posAndSize: PosAndSize;
 
-    constructor (scene: Phaser.Scene, conf: ConfImg) {
+    constructor (scene: Phaser.Scene, conf: ConfImg, referenceGo?: Phaser.GameObjects.Sprite |Phaser.GameObjects.Image | Phaser.Tilemaps.StaticTilemapLayer) {
       super(scene, 0, 0, conf.texture, conf.frame);
       this.posAndSize = new PosAndSize(this.scene);
       this.conf = conf;
       this.helper = new Helpers(scene);
       this.graphic = scene.add.graphics();
-      new HelperGOSrv(scene, this, conf);
+      this.helperGo = new HelperGOSrv(scene, this, conf, referenceGo);
       scene.add.existing(this);
     }
 }
