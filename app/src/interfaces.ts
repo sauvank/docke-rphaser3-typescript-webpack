@@ -58,6 +58,14 @@ export interface DevicesOrientation{
   portrait?: ConfImgOption
 }
 
+export interface ConfBtn extends ConfImg{
+  frames?: {
+    pointerdown ?: number|string,
+    pointerup ?: number|string,
+    pointerover ?: number|string,
+  }
+}
+
 export interface ConfigGO{
   example : {
     imgContainer:{
