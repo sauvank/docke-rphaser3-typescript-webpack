@@ -47,12 +47,6 @@ export class Move extends Scene {
     });
 
     player.body.setBoundsRectangle(new Phaser.Geom.Rectangle(platforms.x, platforms.y, platforms.displayWidth, platforms.displayHeight));
-
-    // this.add.graphics()
-    //     .lineStyle(5, 0x00ffff, 0.5)
-    //     // .strokeRectShape(block1.body.customBoundsRectangle)
-    //     .strokeRectShape(player.body.customBoundsRectangle);
-
   }
 
   update () {

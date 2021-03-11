@@ -1,18 +1,15 @@
 import { SpriteSrv } from '../services/SpriteSrv';
-import { ConfImg } from '../interfaces';
+import { ConfImg, WH } from '../interfaces';
+import * as Util from 'util';
 
 export class Player extends SpriteSrv {
   private lastDirection?: 'up'| 'down' | 'left' | 'right';
   private direction?: 'up'| 'down' | 'left' | 'right';
-
   constructor (scene: Phaser.Scene, conf:ConfImg, referenceGo?: Phaser.GameObjects.Sprite |Phaser.GameObjects.Image | Phaser.Tilemaps.StaticTilemapLayer) {
     super(scene, conf, referenceGo);
     this.createAnimWalk();
     this.scene.physics.world.enable(this);
     this.controls();
-
-    this.body.setVelocity(100, 200);
-    this.body.setBounce(1, 1);
     this.body.setCollideWorldBounds(true);
   }
 
@@ -78,23 +75,24 @@ export class Player extends SpriteSrv {
       if (cursors === undefined) {
         return;
       }
+      const speed = self.helper?.percentFromReference(this.scene.game.canvas.width, 0.5);
 
       if (cursors.left.isDown) {
         self.play('walk_left');
         self.lastDirection = 'left';
-        self.setPosition(self.x += -1, self.y);
+        self.setPosition(self.x += -speed, self.y);
       } else if (cursors.right.isDown) {
         self.lastDirection = 'right';
-        self.setPosition(self.x -= -1, self.y);
+        self.setPosition(self.x -= -speed, self.y);
         self.play('walk_right');
       } else if (cursors.up.isDown) {
         self.lastDirection = 'up';
         self.play('walk_up');
-        self.setPosition(self.x, self.y -= 1);
+        self.setPosition(self.x, self.y -= speed);
       } else if (cursors.down.isDown) {
         self.lastDirection = 'down';
         self.play('walk_down');
-        self.setPosition(self.x, self.y += 1);
+        self.setPosition(self.x, self.y += speed);
       } else {
         self.lastDirection = null;
         self.play(`walk_idle_${self.direction}`);

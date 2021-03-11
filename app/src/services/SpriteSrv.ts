@@ -1,4 +1,4 @@
-import { ConfImg } from '../interfaces';
+import { ConfImg, WH } from '../interfaces';
 import { Helpers } from '../Helpers';
 import { PosAndSize } from '../confGameObject/PosAndSize';
 import { HelperGOSrv } from './HelperGOSrv';
