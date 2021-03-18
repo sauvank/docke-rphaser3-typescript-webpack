@@ -8,11 +8,10 @@ export class BtnService extends ImgSrv {
     constructor (scene: Phaser.Scene, conf: ConfBtn, referenceGo?: Phaser.GameObjects.Sprite |Phaser.GameObjects.Image | Phaser.Tilemaps.StaticTilemapLayer) {
         super(scene, conf, referenceGo);
 
-        if (conf.frames) {
-            this.framePointerdown = conf.frames?.pointerdown || 0;
-            this.framePointerup = conf.frames?.pointerup || 0;
-            this.framePointerover = conf.frames?.pointerover || 0;
-        }
+        this.framePointerdown = conf.frames?.pointerdown || conf.frame || 0;
+        this.framePointerup = conf.frames?.pointerup || conf.frame || 0;
+        this.framePointerover = conf.frames?.pointerover || conf.frame || 0;
+
         this.setInteractive();
     }
 

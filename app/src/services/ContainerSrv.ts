@@ -53,6 +53,12 @@ export class ContainerSrv extends Phaser.GameObjects.Container {
 
   // todo duplicate
   private getParentSize (): {width: number, height: number} {
+    if (!this.scene) {
+      return {
+        width: 0,
+        height: 0
+      };
+    }
     const canvas = this.scene.game.canvas;
     if (!this.haveParent()) {
       return {
